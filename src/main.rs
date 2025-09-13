@@ -40,7 +40,6 @@ async fn main() {
 #[cfg(not(feature = "local"))]
 #[shuttle_runtime::main]
 async fn main() -> shuttle_axum::ShuttleAxum {
-    tracing_subscriber::fmt::init();
     let app = create_app();
     Ok(app.into())
 }
