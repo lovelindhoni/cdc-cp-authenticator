@@ -1,0 +1,28 @@
+[package]
+name = "cp-authenticator"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.99"
+axum = "0.8.4"
+reqwest = { version = "0.12.23", features = ["json"] }
+scraper = "0.24.0"
+serde = "1.0.219"
+serde_json = "1.0.143"
+shuttle-axum = "0.57.0"
+shuttle-runtime = "0.57.0"
+tokio = { version = "1.47.1", features = ["full"] }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.20"
+
+[features]
+local = []
+
+[profile.dev]
+incremental = true
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true
