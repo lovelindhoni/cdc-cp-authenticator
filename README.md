@@ -15,7 +15,7 @@ All the above takes payload in form of
 ```json
 {
   "username": "lovelindhoni",
-  "code": "23AM065"
+  "code": "late-night-lassi-sipper"
 }
 ```
 
@@ -27,3 +27,6 @@ They will return
   "message": "Authentication successful" | "Authentication failed" | "Internal server error"
 }
 ```
+
+> [!NOTE]
+> NOTE: pass `--features local` to cargo when developing locally
